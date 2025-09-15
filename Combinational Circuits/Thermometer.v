@@ -6,10 +6,10 @@ module top_module (
     output heater,
     output aircon,
     output fan
-); 
+);                     
+    
     assign heater=mode&&too_cold;
     assign aircon=too_hot&&~mode;
-    assign fan=heater|fan_on|ac ;
+    assign fan=heater|fan_on|aircon;
     
-
 endmodule
